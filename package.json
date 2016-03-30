@@ -1,0 +1,52 @@
+{
+  "name": "md2pdf",
+  "displayName": "md2pdf",
+  "description": "convert markdown file to pdf",
+  "version": "0.0.1",
+  "icon": "images/icon.png",
+  "publisher": "qinjia",
+  "engines": {
+    "vscode": "^0.10.10"
+  },
+  "categories": [
+    "Other"
+  ],
+  "license" : "MIT",
+  "keywords": [
+    "markdown",
+    "pdf",
+    "convert"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hellopao/md2pdf.git"
+  },
+  "homepage": "https://github.com/hellopao/md2pdf",
+  "bugs": {
+    "url": "https://github.com/hellopao/md2pdf/issues"
+  },
+  "activationEvents": [
+    "onCommand:extension.markdownToPDF"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.markdownToPDF",
+        "title": "Markdown To PDF"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.5",
+    "vscode": "^0.11.0"
+  },
+  "dependencies": {
+    "markdown-pdf": "^7.0.0"
+  }
+}
